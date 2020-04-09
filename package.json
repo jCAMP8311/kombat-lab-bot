@@ -1,0 +1,16 @@
+{
+  "name": "kombat-lab-bot",
+  "version": "1.0.0",
+  "description": "MK lab bot for discord",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Campbell",
+  "license": "MIT"
+}
