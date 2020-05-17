@@ -7,7 +7,7 @@ module.exports = {
             message.channel.send(`${message.author}` + ' Provide "combo" after a character to get a combo string');
         }
         else if (args[0] === 'special') {
-            message.channel.send(`${message.author}` + ' Provide "special" after a character to get a special move from a variation');
+            message.channel.send(`${message.author}` + ' Provide "special" after a character to get a special move from a random tournament variation');
         }
         else {
             message.channel.send(`${message.author}` + ' Available arguments are: combo & special');
