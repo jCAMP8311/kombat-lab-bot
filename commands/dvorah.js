@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports = {
-	name: 'cetrion',
-	aliases: ['Cetrion', 'cetrion'],
-	description: 'Cetrion practice moves',
+	name: 'dvorah',
+	aliases: ['Dvorah', 'dvorah'],
+	description: ' Dvorah practice moves',
 	cooldown: 5,
 	usage: '<combo> <special>',
 	execute(message, args) {
@@ -11,24 +11,26 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 
 		var comboMove = [
-			" [Medium] Natural Ending & [d4] + Unlimited Potential [Mix]. Put these two in different slots and use random hidden playback. Test your reactions."
+			[" [Medium] Black Widow [1,2,1] is +1 on block. There is a small gap where you can flawless block the final hit. Try it out!"],
+			[" [Hard] Bugging Out [f2,2,4] is +4 on block. There is a gap before the last hit, which is also a high, try countering it with a krushing blow (hint: wait until dvorah's butt is right above your head)."],
+			[" [Medium] Bugging Out [f2,2,4] is +4 on block. There is a small gap where you can flawless block the final hit. Try it out!"],
+			[" [Medium] Bugging Out [f2,2,4] has a 24 frame start-up making it easy to read. Try flawless blocking the first hit. Be carefull the second hit comes to fast to punish without the I-frames of u+3."],
+			[" [Medium] Tsetse (Tournament Variation - Buzzed) [f2,2,d1+3] has a gap before the last hit that can be fairly easily flawless blocked. However, if you block LATE it will trigger a krushing blow!"],
 		]
 		var specialMove = [
-			" [Hard] Bouncing Boulder & Boulder Bash [Mix]. Put each special in a different recording slot, then use Random Hidden Playback.",
-			" [Medium] Bouncing Boulder is +3 on block and can be up to +24 on block [fullscreen]. Try flawless blocking the boulder to close the distance quicker.",
-			" [Hard] Earthquake & Earthquake (Cancel) + Boulder Slam/Heel Spike [Mix]. Put each special in a different recording slot, then use Random Hidden Playback. When Cetrion cancels Earthquake it gives her great mix up potential. Practice reading the mix."
+			[" [Easy] Widows Kiss & Widows Kiss [Amplified] [Mix] Widows Kiss can be delayed to catch you off guard. Put the standard and Amplified versions in seperate recording slots. Use Random Hidden Playback to see how you react!"]
 		]
 
-		message.react('🧝‍♀️');
+		message.react('🐝');
 
 		switch (true) {
 			case (args[0] ==='combo'):
 				var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('YELLOW');
+				embed.setTitle('Dvorah');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/dvorah/mugshot.png')
 				embed.addField('Combo', randomComboMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
@@ -39,9 +41,9 @@ module.exports = {
 				var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('YELLOW');
+				embed.setTitle('Dvorah');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/dvorah/mugshot.png')
 				embed.addField('Special', randomSpecialMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus');
 				message.channel.send(`${message.author}`);
@@ -53,9 +55,9 @@ module.exports = {
 				var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('YELLOW');
+				embed.setTitle('Dvorah');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/dvorah/mugshot.png')
 				embed.addField('Random', randomMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);

@@ -70,28 +70,3 @@ module.exports = {
 		}
 	}
 };
-// 		if (args[0] === 'combo') {
-// 			var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
-
-// 			embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png')
-// 			embed.setColor('LUMINOUS_VIVID_PINK')
-// 			embed.setTitle('Baraka')
-// 			embed.addField('Combo', randomComboMove);
-// 			message.channel.send(`${message.author}`);
-// 			message.channel.send(embed);
-// 			// message.channel.send(`${message.author}` + randomComboMove);
-// 		}
-// 		else if (args[0] === 'special') {
-// 			var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)]; 
-// 			message.channel.send(`${message.author}` + randomSpecialMove);
-// 		}
-// 		else if (!args[0]) {
-// 			var anyMove = comboMove.concat(specialMove);
-// 			var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
-// 			message.channel.send(`${message.author}` + randomMove);
-// 		}
-// 		else if (args[0] != 'combo' || 'special') {
-// 			message.channel.send(`${message.author}` + ' That is not a valid argument, please use !args-info to see the list of available arguments');
-// 		}
-// 	},
-// };
