@@ -10,13 +10,13 @@ module.exports = {
 
 		const embed = new Discord.MessageEmbed()
 
-		var comboMove = [
+		const comboMove = [
 			" [Hard] Mangled [1,1,2] is +1 on block. Try blocking the first two hits and then flawless blocking the last hit to punish.",
 			" [Hard] Splintered [2,1+3] is +1 on block. Try neutral ducking the first swing and then flawless blocking the second hit. Follow up with a flawless block attack!",
 			" [Hard] Splintered [2,1+3] is +1 on block. The first swing is a high, and while very hard to read, can be punished with an uppercut for a crushing blow. Try it out!",
 			" [Med] Bloody Mess [F2,1,2] is +1 on block. There is a gap in the last hit. Try to flawless block it!"
 		]
-		var specialMove = [
+		const specialMove = [
 			" [Med] Chop Chop - Try blocking 3 hits and then punishing with b+3",
 			" [Easy] Blade Spark [Amplified] Try neutral ducking the first projectile and then flawless blocking the second projectile."
 		]
@@ -25,7 +25,7 @@ module.exports = {
 
 		switch (true) {
 			case (args[0] ==='combo'):
-				var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('WHITE');
@@ -38,7 +38,7 @@ module.exports = {
 				break;
 
 			case (args[0] === 'special'):
-				var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
+				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('WHITE');
@@ -51,8 +51,8 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				var anyMove = comboMove.concat(specialMove);
-				var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
+				const anyMove = comboMove.concat(specialMove);
+				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('WHITE');

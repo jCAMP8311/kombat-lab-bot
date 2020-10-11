@@ -10,20 +10,22 @@ module.exports = {
 
 		const embed = new Discord.MessageEmbed()
 
-		var comboMove = [
-			" [Medium] Natural Ending & [d4] + Unlimited Potential [Mix]. Put these two in different slots and use random hidden playback. Test your reactions."
+		const comboMove = [
+			" [Random Playback Mix]\n Slot 1 - Natural Ending + [d4]\n Slot 2 - Unlimited Potential",
+			" [Hard] Imminent Eruption [1,1,4] The last hit is a low and has a long enough start up that it can be flawless blocked. Try it out!",
+			" [Random Playback Mix]\n Slot 1 - Wind Storm\n Slot 2 - Imminent Eruption\n The last hit in Imminent Erruption is a low and has a long enough start up that it can be flawless blocked. Test your reflexes! "
 		]
-		var specialMove = [
-			" [Hard] Bouncing Boulder & Boulder Bash [Mix]. Put each special in a different recording slot, then use Random Hidden Playback.",
+		const specialMove = [
+			" [Random Playback Mix]\n Slot 1 - Bouncing Boulder\n Slot 2 - Boulder Bash.",
 			" [Medium] Bouncing Boulder is +3 on block and can be up to +24 on block [fullscreen]. Try flawless blocking the boulder to close the distance quicker.",
-			" [Hard] Earthquake & Earthquake (Cancel) + Boulder Slam/Heel Spike [Mix]. Put each special in a different recording slot, then use Random Hidden Playback. When Cetrion cancels Earthquake it gives her great mix up potential. Practice reading the mix."
+			" [Random Playback Mix]\n Slot 1 - Earthquake + Earthquake(Cancel).\n Slot 2 - Boulder Slam/Heel Spike.\n When Cetrion cancels Earthquake it gives her great mix up potential. Practice reading the mix."
 		]
 
 		message.react('🧝‍♀️');
 
 		switch (true) {
 			case (args[0] ==='combo'):
-				var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('AQUA');
@@ -36,7 +38,7 @@ module.exports = {
 				break;
 
 			case (args[0] === 'special'):
-				var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
+				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('AQUA');
@@ -49,8 +51,8 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				var anyMove = comboMove.concat(specialMove);
-				var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
+				const anyMove = comboMove.concat(specialMove);
+				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('AQUA');

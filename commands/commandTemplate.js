@@ -10,10 +10,10 @@ module.exports = {
 
 		const embed = new Discord.MessageEmbed()
 
-		var comboMove = [
+		const comboMove = [
 
 		]
-		var specialMove = [
+		const specialMove = [
 
 		]
 
@@ -21,7 +21,7 @@ module.exports = {
 
 		switch (true) {
 			case (args[0] ==='combo'):
-				var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('');
@@ -34,7 +34,7 @@ module.exports = {
 				break;
 
 			case (args[0] === 'special'):
-				var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
+				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('');
@@ -47,8 +47,8 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				var anyMove = comboMove.concat(specialMove);
-				var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
+				const anyMove = comboMove.concat(specialMove);
+				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('');

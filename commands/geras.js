@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports = {
-	name: 'cassie',
-	aliases: ['Cassie', 'cassie', 'Cassie Cage', 'cassie cage'],
-	description: 'Cassie Cage practice moves',
+	name: 'geras',
+	aliases: ['Geras', 'geras'],
+	description: ' practice moves',
 	cooldown: 5,
 	usage: '<combo> <special>',
 	execute(message, args) {
@@ -11,25 +11,22 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 
 		const comboMove = [
-			" [Hard] Shocker [f2,1+3] is +1 on block. Try flawless blocking the first hit. Follow up with a flawless block attack!",
-			" [Very Hard] Heavy Hitter [f3,4,3] is +1 on block. Try hoping the first hit (low) and punishing with d+1/2,",
-			" [Easy] Ball Buster can only be amplified on hit and is -22 on block. Practice blocking the first hit and getting a full punish!",
+            "[Medium] The Undying[2,4,1] The second hit is a low and has a large enough gap after the first hit to be flawless blocked. Follow up with a flawless block attack!",
 		]
 		const specialMove = [
-			" [Medium] Kneecappin' [Amplified] A single hop can avoid the first hit [Mid] and the follow up shots from being amplified. Try practicing your hops!",
-			" [Easy] Shoulder Charge [Amplified] This move has a crushing blow if you block late. Try flawless blocking and following up with a flawless block attack! "
+
 		]
 
-		message.react('🕶️');
+		message.react('⌛');
 
 		switch (true) {
 			case (args[0] ==='combo'):
 				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('LUMINOUS_VIVID_PINK');
-				embed.setTitle('Cassie Cage');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cassiecage/mugshot.png');
+				embed.setColor('#EEE8AA');
+				embed.setTitle('Geras');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
 				embed.addField('Combo', randomComboMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
@@ -40,9 +37,9 @@ module.exports = {
 				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('LUMINOUS_VIVID_PINK');
-				embed.setTitle('Cassie Cage');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cassiecage/mugshot.png');
+				embed.setColor('#EEE8AA');
+				embed.setTitle('Geras');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
 				embed.addField('Special', randomSpecialMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus');
 				message.channel.send(`${message.author}`);
@@ -54,9 +51,9 @@ module.exports = {
 				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('LUMINOUS_VIVID_PINK');
-				embed.setTitle('Cassie Cage');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cassiecage/mugshot.png');
+				embed.setColor('#EEE8AA');
+				embed.setTitle('Geras');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
 				embed.addField('Random', randomMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);

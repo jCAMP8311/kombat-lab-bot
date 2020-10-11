@@ -10,12 +10,12 @@ module.exports = {
 
 		const embed = new Discord.MessageEmbed()
 
-		var comboMove = [
+		const comboMove = [
             [" [Easy] Keep'em Honest [f3,2] there is a gap after the first hit that you can flawless block the last hit. Try it out!"],
             [" [Random Playback Mix]\n Slot 1 - Keep'em Honest\n Slot 2 - Keep'em Honest & Rattle Snake Slide\n Rattle Snake Slide can only be amplified after successfully hitting."],
 			[" [Random Playback Mix]\n Slot 1 - High Noon + Zaterrean Spit(close)\n Slot 2 - High Noon & Rattle Snake Slide\n Erron can mix up cancelling into his spit and to go for a throw or cancel into a Slide to enchance and also go for a throw. Errons throw while you are in acid can melt your health bar."],
 		]
-		var specialMove = [
+		const specialMove = [
             [" [Random Playback Mix]\n Slot 1 - Locked And Loaded (Straight Shot)\n Slot 2 - Locked And Loaded (Low Shot)\n Slot 3 - Locked And Loaded (Drop Shot)\n Slot 4 - Locked And Loaded (Drop Shot - Delayed)\n Erron can mix up his projectiles very effectively."],
             [" [Easy] Scud Shot - Can absorb almost every projectile in the game, even Skarlets Blood Trail. He can then spend one bar of meter to do a mid shot. See how it effects your projectiles!"],
             [" [Hard] Boot Drop - If boot drop hits twice in a row it's a devastating krushing blow. Erron can also spend a bar of meter to enchance it if blocked to mix you up and do a low shot. While difficult it can be flawless blocked and punished with u+2. Try it out!"],
@@ -25,7 +25,7 @@ module.exports = {
 
 		switch (true) {
 			case (args[0] ==='combo'):
-				var randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('#808000');
@@ -38,7 +38,7 @@ module.exports = {
 				break;
 
 			case (args[0] === 'special'):
-				var randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
+				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('#808000');
@@ -51,8 +51,8 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				var anyMove = comboMove.concat(specialMove);
-				var randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
+				const anyMove = comboMove.concat(specialMove);
+				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('#808000');
