@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports = {
-	name: 'geras',
-	aliases: ['Geras', 'geras'],
+	name: 'jacqui',
+	aliases: ['jacqui', 'Jacqui'],
 	description: ' practice moves',
 	cooldown: 5,
 	usage: '<combo> <special>',
@@ -11,26 +11,26 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 
 		const comboMove = [
-			"[Medium] The Undying[2,4,1] The second hit is a low and has a large enough gap after the first hit to be flawless blocked. Follow up with a flawless block attack!",
-			"[Medium] Matter Of Time[f2,1,2] The final hit can be flawless blocked. Follow up with a flawless block attack!",
-			"[Random Playback Mix]\n Slot 1 - Matter Of Time\n Slot 2 - The Deathless Giant + Close Quick Sand\n Slot 3 - The Deathless Giant + Bed Of Spikes/n Slot 4 - The Deathless Giant + Temportal Advantage(Amp)\n Geras can keep himself safe\
-			 from being flawless blocked on Matter of Time and instead use [f2+1] and cancel into a special.",
+            "[Random Playback Mix]\n Slot 1 - Ground Recon\n Slot 2 - Ground Recon(Cancel) + Lethal Clinch\n Slot 3 - Ground Recon(Cancel) + b4n In her 1st round KO variation Jacqui can cancel several moves to keep her unpredicatable and constantly pressure.",
+            "[Random Playback Mix]\n Slot 1 - Snake Eater\n Slot 2 - True Hero(Cancel) + In The Trenches\n Slot 3 - True Hero(Cancel) + Throw\n In her 1st round KO variation Jacqui can cancel several moves to keep her unpredicatable and constantly pressure.",
+            "[Random Playback Mix]\n Slot 1 - All For One\n Slot 2 - Going Ballistic(Cancel) + Hop Attack\n Slot 3 - Going Ballistic(Cancel) + Hawkeye + Bionic Dash\n In her 1st round KO variation Jacqui can cancel several moves to keep her\
+             unpredicatable and constantly pressure.",
 		]
 		const specialMove = [
-			"[Hard] Reverse Time - Geras can use two bars of his defensive gauage to revert his health and position 3 seconds in the past. Try setting up an AI to [d2-krushing blow] him and see how he turns the tables!",
-			"[Easy] Titan Tackle - Titan Tackle is a command grab and while it's easier to read if Geras throws it out raw it can still deal an insane amount of damage to its krushing blow. See how far (when extended) it can carry you!"
+            "[Hard] Bionic Dash - This is an extremely fast dash that has a krushing blow if it hits from max range. With a little practice it can be flawless blocked. Test out your reflexes!",
+            "[Random Playback Mix]\n Slot 1 - f2 + Bionic Bounce + (Air) Ground Pound[Amplified]\n Slot 2 - f2 + Bionic Bounce + (Air) Ground Pound + Bionic Dash"
 		]
 
-		message.react('⌛');
+		message.react('🏋️‍♀️');
 
 		switch (true) {
 			case (args[0] ==='combo'):
 				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('#EEE8AA');
-				embed.setTitle('Geras');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
+				embed.setColor('#00FF7F');
+				embed.setTitle('Jacqui');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jacqui/mugshot.png')
 				embed.addField('Combo', randomComboMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
@@ -41,9 +41,9 @@ module.exports = {
 				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('#EEE8AA');
-				embed.setTitle('Geras');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
+				embed.setColor('#00FF7F');
+				embed.setTitle('Jacqui');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jacqui/mugshot.png')
 				embed.addField('Special', randomSpecialMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus');
 				message.channel.send(`${message.author}`);
@@ -55,9 +55,9 @@ module.exports = {
 				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('#EEE8AA');
-				embed.setTitle('Geras');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/geras/mugshot.png')
+				embed.setColor('#00FF7F');
+				embed.setTitle('Jacqui');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jacqui/mugshot.png')
 				embed.addField('Random', randomMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
