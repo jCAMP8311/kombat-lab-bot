@@ -2,15 +2,15 @@ const Discord = require('discord.js');
 
 module.exports = {
 	name: 'erron black',
-	aliases: ['erron', 'erron black', 'Erron', 'Erron Black'],
+	aliases: ['Erron', 'Erron Black', 'erron', 'erron black',],
 	description: ' Erron Black practice moves',
 	cooldown: 5,
-	usage: '<combo> <special>',
+	usage: '<normal> <special>',
 	execute(message, args) {
 
 		const embed = new Discord.MessageEmbed()
 
-		const comboMove = [
+		const normalMove = [
             [" [Easy] Keep'em Honest [f3,2] there is a gap after the first hit that you can flawless block the last hit. Try it out!"],
             [" [Random Playback Mix]\n Slot 1 - Keep'em Honest\n Slot 2 - Keep'em Honest & Rattle Snake Slide\n Rattle Snake Slide can only be amplified after successfully hitting."],
 			[" [Random Playback Mix]\n Slot 1 - High Noon + Zaterrean Spit(close)\n Slot 2 - High Noon & Rattle Snake Slide\n Erron can mix up cancelling into his spit and to go for a throw or cancel into a Slide to enchance and also go for a throw. Errons throw while you are in acid can melt your health bar."],
@@ -24,14 +24,14 @@ module.exports = {
 		message.react('🤠');
 
 		switch (true) {
-			case (args[0] ==='combo'):
-				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+			case (args[0] ==='normal'):
+				const randomNormalMove = normalMove[Math.floor(Math.random() * normalMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('#808000');
 				embed.setTitle('Erron Black');
 				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/erronblack/mugshot.png')
-				embed.addField('Combo', randomComboMove);
+				embed.addField('Normal', randomNormalMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
 				message.channel.send(embed);
@@ -51,7 +51,7 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				const anyMove = comboMove.concat(specialMove);
+				const anyMove = normalMove.concat(specialMove);
 				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');

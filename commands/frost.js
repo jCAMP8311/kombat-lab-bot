@@ -5,12 +5,12 @@ module.exports = {
 	aliases: ['Frost', 'frost'],
 	description: ' Frost practice moves',
 	cooldown: 5,
-	usage: '<combo> <special>',
+	usage: '<normal> <special>',
 	execute(message, args) {
 
 		const embed = new Discord.MessageEmbed()
 
-		const comboMove = [
+		const normalMove = [
 			"[Random Playback Mix]\n Slot 1 - Blood Sweat And Circuits\n Slot 2 - Frozen In Time\n These moves have the same first two hits, but Blood Sweat And Circuits can be used to push you back on block, while Frozen In Time is an overhead.",
 			"[Easy] Blood Sweat And Curcuits [1,3,2] is +3 on block. Try blocking the first two hits and then flawless blocking the last hit to punish.",
 			"[Easy] Frozen In Time [1,3,4] Has a slightly smaller gap at the end than Blood Sweat And Curcuits. Try blocking the first two hits and then flawless blocking the last hit to punish.",
@@ -26,14 +26,14 @@ module.exports = {
 		message.react('❄️');
 
 		switch (true) {
-			case (args[0] ==='combo'):
-				const randomComboMove = comboMove[Math.floor(Math.random() * comboMove.length)];
+			case (args[0] ==='normal'):
+				const randomNormalMove = normalMove[Math.floor(Math.random() * normalMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
 				embed.setColor('#00FFFF');
 				embed.setTitle('Frost');
 				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/frost/mugshot.png')
-				embed.addField('Combo', randomComboMove);
+				embed.addField('Normal', randomNormalMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
 				message.channel.send(embed);
@@ -53,7 +53,7 @@ module.exports = {
 				break;
 
 			case (!args[0]):
-				const anyMove = comboMove.concat(specialMove);
+				const anyMove = normalMove.concat(specialMove);
 				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');

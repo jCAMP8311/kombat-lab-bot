@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports = {
-	name: 'cetrion',
-	aliases: ['Cetrion', 'cetrion'],
-	description: 'Cetrion practice moves',
+	name: 'jax',
+	aliases: ['Jax', 'jax'],
+	description: ' practice moves',
 	cooldown: 5,
 	usage: '<normal> <special>',
 	execute(message, args) {
@@ -11,26 +11,22 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 
 		const normalMove = [
-			" [Random Playback Mix]\n Slot 1 - Natural Ending + [d4]\n Slot 2 - Unlimited Potential",
-			" [Hard] Imminent Eruption [1,1,4] The last hit is a low and has a long enough start up that it can be flawless blocked. Try it out!",
-			" [Random Playback Mix]\n Slot 1 - Wind Storm\n Slot 2 - Imminent Eruption\n The last hit in Imminent Erruption is a low and has a long enough start up that it can be flawless blocked. Test your reflexes! "
+
 		]
 		const specialMove = [
-			" [Random Playback Mix]\n Slot 1 - Bouncing Boulder\n Slot 2 - Boulder Bash.",
-			" [Medium] Bouncing Boulder is +3 on block and can be up to +24 on block [fullscreen]. Try flawless blocking the boulder to close the distance quicker.",
-			" [Random Playback Mix]\n Slot 1 - Earthquake + Earthquake(Cancel).\n Slot 2 - Boulder Slam/Heel Spike.\n When Cetrion cancels Earthquake it gives her great mix up potential. Practice reading the mix."
+
 		]
 
-		message.react('🧝‍♀️');
+		message.react('🦾');
 
 		switch (true) {
 			case (args[0] ==='normal'):
 				const randomNormalMove = normalMove[Math.floor(Math.random() * normalMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('#778899');
+				embed.setTitle('Jax');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jax/mugshot.png')
 				embed.addField('Normal', randomNormalMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
@@ -41,9 +37,9 @@ module.exports = {
 				const randomSpecialMove = specialMove[Math.floor(Math.random() * specialMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('#778899');
+				embed.setTitle('Jax');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jax/mugshot.png')
 				embed.addField('Special', randomSpecialMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus');
 				message.channel.send(`${message.author}`);
@@ -55,9 +51,9 @@ module.exports = {
 				const randomMove = anyMove[Math.floor(Math.random() * anyMove.length)];
 
 				embed.setAuthor('KombatLabBot', 'http://mortalkombatwarehouse.com/mk/cybersubzero/versus_full.png');
-				embed.setColor('AQUA');
-				embed.setTitle('Cetrion');
-				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/cetrion/mugshot.png');
+				embed.setColor('#778899');
+				embed.setTitle('Jax');
+				embed.setThumbnail('https://www.mortalkombatwarehouse.com/mk11/jax/mugshot.png')
 				embed.addField('Random', randomMove);
 				embed.setFooter('Feedback? Tweet me @just_jebus')
 				message.channel.send(`${message.author}`);
